@@ -14,6 +14,7 @@ module.exports = {
               path: `${__dirname}/posts`,
             }
           },
+        "gatsby-plugin-mdx",
     ],
     pathPrefix: "/info-base"
 }

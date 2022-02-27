@@ -20,8 +20,8 @@ const Layout = ({ pageTitle, children }) => {
       <header className='text-slate-700 text-3xl'>{data.site.siteMetadata.title}</header>
       <nav>
         <ul className='flex pl-0'>
-          <li className='pr-8 underline'><Link to="/">Home</Link></li>
-          <li className='pr-8 underline'><Link to="/dummy">Dummy</Link></li>
+          <li className='pr-8 underline list-none'><Link to="/">Home</Link></li>
+          <li className='pr-8 underline list-none'><Link to="/dummy">Dummy</Link></li>
         </ul>
       </nav>
       <main>
