@@ -2,6 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Manual Markdown styles */
 ul {
     @apply list-disc;
    }   
+
+a {
+    @apply text-slate-500 hover:text-gray-800 hover:underline;
+ }
+
+body {
+    font-family: Helvetica, sans-serif, Arial;
+}
+
+h1 {
+    @apply text-3xl;
+}
+
+h2 {
+    @apply text-2xl;
+}
+
+h3 {
+    @apply text-xl;
+}
+
+.task-list-item {
+    @apply list-none;
+}
+
+ul > li {
+    margin-left: 1rem;
+}
+
+blockquote {
+    @apply relative p-2 text-xl italic border-l-4 text-neutral-600 border-neutral-500;
+}
+
+/* Table styles */
+
+table {
+    @apply table-auto min-w-full;
+}
+
+thead {
+    @apply bg-white border-b border-gray-400;
+}
+
+th {
+    @apply text-sm font-medium text-gray-900 px-6 py-4 text-left;
+}
+
+tbody tr {
+    @apply bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100;
+}
+
+tbody tr td {
+    @apply text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap;
+}

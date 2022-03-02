@@ -14,7 +14,22 @@ module.exports = {
               path: `${__dirname}/posts`,
             }
           },
-        "gatsby-plugin-mdx",
+          {
+            resolve: `gatsby-plugin-mdx`,
+            options: {
+              gatsbyRemarkPlugins: [
+                {
+                  resolve: `gatsby-remark-prismjs`,
+                  options: {
+                    classPrefix: "language-",
+                    aliases: {},
+                    showLineNumbers: false,
+                    noInlineHighlight: false,
+                  },
+                },
+              ],
+            },
+          },
     ],
     pathPrefix: "/info-base"
 }

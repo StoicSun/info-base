@@ -24,8 +24,11 @@
     "gatsby-plugin-mdx": "^3.8.1",
     "gatsby-plugin-postcss": "^5.8.0",
     "gatsby-plugin-sharp": "^4.8.1",
+    "gatsby-remark-prismjs": "^6.9.0",
     "gatsby-source-filesystem": "^4.8.1",
+    "gatsby-transformer-remark": "^5.9.0",
     "postcss": "^8.4.7",
+    "prismjs": "^1.27.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },

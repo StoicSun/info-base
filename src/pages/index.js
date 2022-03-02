@@ -1,29 +1,24 @@
 // Step 1: Import React
 import React from "react"
 import Layout from "../components/layout"
-import { StaticImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { Link, graphql } from "gatsby"
 
 // Step 2: Define your component
 const IndexPage = ({data}) => {
   return (
-    <Layout pageTitle={"Pages"}>
+    <Layout isIndexPg={true} pageTitle={"Pages"}>
       {
         data.allMdx.nodes.map((node) => (
-          <article key={node.id}>
-            <h2 className="text-2xl mt-6">{node.frontmatter.title}</h2>
-            <p className="text-sm">Posted: {node.frontmatter.date}</p>
-            <MDXRenderer>
-              {node.body}
-            </MDXRenderer>
+          <article key={node.id} className='mr-12'>
+            <h2>
+              <Link to={`/blog/${node.slug}`} className='text-slate-500 hover:text-slate-800'>
+                {node.frontmatter.title}
+              </Link>
+            </h2>
+            <p className="text-xs text-slate-600">Posted: {node.frontmatter.date}</p>
           </article>
         ))
       }
-      <StaticImage
-        alt="pengu"
-        src="../images/pengu.png"
-      />
     </Layout>
 )
 }
@@ -38,7 +33,7 @@ export const query = graphql`
           title
         }
         id
-        body
+        slug
       }
     }
 }
