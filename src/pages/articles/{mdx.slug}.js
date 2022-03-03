@@ -5,9 +5,9 @@ import Layout from '../../components/layout'
 
 const BlogPost = ({data}) => {
   return (
-    <Layout isIndexPg={false} pageTitle={data.mdx.frontmatter.title}>
+    <Layout showBanner={false} fixFooter={false} pageTitle={data.mdx.frontmatter.title}>
       <p className='text-sm text-gray-600'>{data.mdx.frontmatter.date}</p>
-      <div className='mt-4 flex flex-col flex-nowrap gap-y-3'>
+      <div className='mdx mt-4 flex flex-col flex-nowrap gap-y-3 text-gray-700'>
         <MDXRenderer>
           {data.mdx.body}
         </MDXRenderer>

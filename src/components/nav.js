@@ -7,6 +7,7 @@ function Nav() {
         <ul className='flex pl-0'>
           <li className='pr-8 list-none'><Link to="/" className='text-slate-700'>Home</Link></li>
           <li className='pr-8 list-none'><Link to="/dummy" className='text-slate-700'>About Me</Link></li>
+          <li className='pr-8 list-none'><Link to="/all-pages" className='text-slate-700'>All Pages</Link></li>
         </ul>
     </nav>
   )
