@@ -1,5 +1,5 @@
 {
-    "componentChunkName": "component---src-pages-index-js",
-    "path": "/",
+    "componentChunkName": "component---src-pages-all-pages-js",
+    "path": "/all-pages/",
     "result": {"data":{"allMdx":{"nodes":[{"frontmatter":{"date":"3 March, 2022","title":"Notes on GSOC","description":"Organised by ASCII club"},"id":"fe2129a0-3b6c-55d3-a666-748a9376e11a","slug":"gsoc"},{"frontmatter":{"date":"27 February, 2022","title":"Test Page","description":"All the things that can be done in MDX"},"id":"f2f7cfc3-7590-5cca-b263-0bd4eff104df","slug":"test"}]}},"pageContext":{}},
     "staticQueryHashes": ["3159585216"]}
