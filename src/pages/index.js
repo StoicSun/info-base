@@ -27,7 +27,10 @@ const IndexPage = ({data}) => {
 // Exporting the graphql query for getting a list of all MDX files present in the data layer
 export const query = graphql`
   query {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+    allMdx(
+      limit: 4
+      sort: {fields: frontmatter___date, order: DESC}
+      ) {
       nodes {
         frontmatter {
           date(formatString: "D MMMM, YYYY")
