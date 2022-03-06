@@ -19,18 +19,18 @@ const Layout = ({ showBanner, fixFooter, pageTitle, children }) => {
   
   // isIndexPg checks whether to display banner or not
   return (
-    <div className='mx-4 md:m-auto max-w-[500px] mt-4'>
+    <div className='mx-4 md:m-auto max-w-[550px] mt-4'>
       <title>{data.site.siteMetadata.title} - {pageTitle}</title>
-      {showBanner ? <header className="w-72">
+      {showBanner ? <header className="w-72 mt-4">
           <StaticImage alt="Info Base" src="../images/heading.svg"/>
           <p className='mt-2 text-center text-slate-600'>A site to collect my information and sometimes share it</p>
       </header> : ''}
       <Nav />
       <main>
-        <h1 className='text-teal-700 text-2xl mb-3 font-light'>{'>'}{pageTitle}</h1>
+        {pageTitle ? <h1 className='text-teal-700 text-2xl mb-3 font-light'>{'>'}{pageTitle}</h1> : ''}
         {children}
       </main>
-      <footer className={fixFooter ? 'w-[17.5rem] py-6 bg-white fixed bottom-0' : 'w-[17rem] pt-24 pb-4 bg-white bottom-0'}>
+      <footer className={fixFooter ? 'w-[17rem] py-6 bg-white fixed bottom-0' : 'pt-24 pb-4 bg-white bottom-0'}>
         <p className='block text-center text-gray-600 text-sm'>©Suraj Das</p>
       </footer>
     </div>

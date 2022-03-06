@@ -66,3 +66,13 @@ tbody tr {
 tbody tr td {
     @apply text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap;
 }
+
+/* Code block styles */
+pre {
+    @apply rounded-[11px] drop-shadow-lg;
+}
+
+/* Tags container */
+.tag-container a {
+    text-decoration: none;
+}

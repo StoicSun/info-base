@@ -9,7 +9,7 @@ function allPages({data}) {
         data.allMdx.nodes.map((node) => (
           <article key={node.id} className='mr-12 mt-3'>
             <h3>
-              <Link to={`/articles/${node.slug}`} className='text-slate-500 hover:text-slate-800'>
+              <Link to={`/articles/${node.slug}`}>
                 {node.frontmatter.title}
               </Link>
             </h3>
