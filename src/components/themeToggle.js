@@ -1,17 +1,20 @@
-import React, {useState} from "react"
+import React, {useEffect, useRef, useState} from "react"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import { StaticImage } from "gatsby-plugin-image"
 
 export default function ThemeToggle() {
     // never thought just switching button styles in sync with the theme would be this hard
-    const currTheme = document.querySelector('body').className
+    
+    const [inversion, setInversion] = useState('dark')
 
-    const [inversion, setInversion] = useState(currTheme==='dark' ? true : false)
+    const themeRef = useRef(null)
+
+    useEffect(() =>  setInversion(getComputedStyle(themeRef.current)['background-color'] === 'rgb(17, 24, 39)' ? true : false), [])
 
     return (
     <ThemeToggler>
     {({ theme, toggleTheme }) => (                      
-        <button className="w-7 h-5 md:w-10 md:h-10" onClick={e => {
+        <button ref={themeRef} className="w-7 h-5 md:w-10 md:h-10 bg-primary" onClick={e => {
             if (theme === 'dark') {
                 toggleTheme('light')
                 setInversion(false)

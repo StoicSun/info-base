@@ -19,7 +19,7 @@ const Layout = ({ showBanner, fixFooter, pageTitle, children }) => {
   
   // isIndexPg checks whether to display banner or not
   return (
-    <div className='mx-4 md:m-auto max-w-[550px] text-text-main'>
+    <div className='mx-4 md:m-auto max-w-[550px]'>
       <title>{data.site.siteMetadata.title} - {pageTitle}</title>
       {showBanner ? <header className="w-72 mt-4">
           <StaticImage alt="Info Base" src="../images/heading.svg"/>
