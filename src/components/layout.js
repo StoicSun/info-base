@@ -19,19 +19,19 @@ const Layout = ({ showBanner, fixFooter, pageTitle, children }) => {
   
   // isIndexPg checks whether to display banner or not
   return (
-    <div className='mx-4 md:m-auto max-w-[550px] mt-4'>
+    <div className='mx-4 md:m-auto max-w-[550px] text-text-main'>
       <title>{data.site.siteMetadata.title} - {pageTitle}</title>
       {showBanner ? <header className="w-72 mt-4">
           <StaticImage alt="Info Base" src="../images/heading.svg"/>
-          <p className='mt-2 text-center text-slate-600'>A site to collect my information and sometimes share it</p>
+          <p className='mt-2 text-center text-slate-600 dark:text-slate-400'>A site to collect my information and sometimes share it</p>
       </header> : ''}
-      <Nav />
+      <Nav isIndex={showBanner}/>
       <main>
-        {pageTitle ? <h1 className='text-teal-700 text-2xl mb-3 font-light'>{'>'}{pageTitle}</h1> : ''}
+        {pageTitle ? <h1 className='text-teal-700 dark:text-teal-600 text-2xl mb-3 font-light'>{'>'}{pageTitle}</h1> : ''}
         {children}
       </main>
-      <footer className={fixFooter ? 'w-[17rem] py-6 bg-white fixed bottom-0' : 'pt-24 pb-4 bg-white bottom-0'}>
-        <p className='block text-center text-gray-600 text-sm'>©Suraj Das</p>
+      <footer className={fixFooter ? 'w-[17rem] py-6 fixed bottom-0' : 'pt-24 pb-4 bottom-0'}>
+        <p className='block text-center text-gray-600 dark:text-gray-500 text-sm'>©{new Date().getFullYear()} Suraj Das</p>
       </footer>
     </div>
   )

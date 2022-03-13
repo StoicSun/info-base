@@ -13,8 +13,8 @@ function allPages({data}) {
                 {node.frontmatter.title}
               </Link>
             </h3>
-            <p className="text-xs text-slate-600">Posted: {node.frontmatter.date}</p>
-            <p className="text-sm text-slate-600">{node.frontmatter.description}</p>
+            <p className="text-xs text-slate-600 dark:text-slate-500">Posted: {node.frontmatter.date}</p>
+            <p className="text-sm text-slate-600 dark:text-slate-400">{node.frontmatter.description}</p>
           </article>
         ))
       }

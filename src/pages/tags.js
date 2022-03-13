@@ -13,7 +13,7 @@ const TagsPage = ({
     <Layout pageTitle="Tags" showBanner={false} fixFooter={true}>
         <ul className="m-3">
         {group.map(tag => (
-            <li key={tag.fieldValue} className="pt-[2px]">
+            <li key={tag.fieldValue} className="pt-[2px] dark:list-none">
             <Link to={`../pages/tags/${tag.fieldValue}`}>
                 {tag.fieldValue} ({tag.totalCount})
             </Link>

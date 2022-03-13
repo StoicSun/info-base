@@ -14,8 +14,8 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout showBanner={false} fixFooter={true}>
-      <h2>{tagHeader}</h2>
-      <ul className="m-2">
+      <h2 className="dark:text-slate-300">{tagHeader}</h2>
+      <ul className="m-2 dark:list-none">
         {edges.map(({ node }) => {
           const { slug } = node
           const { title } = node.frontmatter

@@ -11,12 +11,12 @@ const IndexPage = ({data}) => {
         data.allMdx.nodes.map((node) => (
           <article key={node.id} className='mr-12 mt-3'>
             <h2>
-              <Link to={`/articles/${node.slug}`} className='text-slate-500 hover:text-slate-800'>
+              <Link to={`/articles/${node.slug}`} className='text-slate-500 hover:text-slate-800 dark:hover:text-slate-400'>
                 {node.frontmatter.title}
               </Link>
             </h2>
-            <p className="text-xs text-slate-600">Posted: {node.frontmatter.date}</p>
-            <p className="text-sm text-slate-600">{node.frontmatter.description}</p>
+            <p className="text-xs text-slate-600 dark:text-slate-500">Posted: {node.frontmatter.date}</p>
+            <p className="text-sm text-slate-600 dark:text-slate-400">{node.frontmatter.description}</p>
           </article>
         ))
       }
